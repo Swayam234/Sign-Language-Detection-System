@@ -1,0 +1,14 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# ML
+*.h5
+*.keras
+
+# OS
+.DS_Store
+Thumbs.db
+
+dataset/
