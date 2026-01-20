@@ -19,6 +19,8 @@ Features
 
 7) Modular project structure (training + live prediction)
 
+
+
 Tech Stack
 
 Python 3.10+
@@ -34,55 +36,42 @@ ASL Alphabet Dataset
 VS Code / Command Line
 
 
-Project Structure
-
-Sign-Language-Detector/
-│
-├── src/
-│   ├── train_model.py        # Model training script
-│   ├── predict_live.py       # Real-time webcam prediction
-│
-├── dataset/
-│   └── asl_alphabet_train/   # ASL training dataset (A–Z)
-│
-├── model.h5                  # Trained CNN model (not pushed to GitHub)
-├── requirements.txt          # Project dependencies
-├── .gitignore
-└── README.md
 
 
 Accuracy & Performance
 
-Trained on ~87,000 images
+1) Trained on ~87,000 images
 
-Supports A–Z alphabets
+2) Supports A–Z alphabets
 
-Accuracy improves with:
+3) Accuracy improves with:
 
-Proper lighting
+4) Proper lighting
 
-Centered hand inside ROI
+5) Centered hand inside ROI
 
-Reduced background noise
+6) Reduced background noise
+
 
 
 Limitations
 
-Detects single hand only
+1) Detects single hand only
 
-Background clutter can affect accuracy
+2) Background clutter can affect accuracy
 
-Not yet optimized for dynamic sentence-level gestures
+3) Not yet optimized for dynamic sentence-level gestures
+
 
 
 Future Enhancements
 
-MediaPipe-based hand landmark detection
+1) MediaPipe-based hand landmark detection
 
-CNN + LSTM for motion-based gestures
+2) CNN + LSTM for motion-based gestures
 
-Sign-to-speech conversion
+3) Sign-to-speech conversion
 
-Web app using Streamlit / Flask
+4) Web app using Streamlit / Flask
 
-Sentence-level sign interpretation
+5) Sentence-level sign interpretation
