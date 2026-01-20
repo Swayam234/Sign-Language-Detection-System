@@ -3,6 +3,9 @@ Sign Language Detection System (Real-Time)
 A real-time Sign Language Detection system using Deep Learning and Computer Vision that recognizes hand gestures through a webcam and predicts corresponding sign language alphabets.
 This project demonstrates the application of CNN-based image classification with live video inference.
 
+
+
+
 Features
 
 1) Real-time sign language detection using webcam
@@ -18,6 +21,7 @@ Features
 6) Runs fully on CPU (no GPU required)
 
 7) Modular project structure (training + live prediction)
+
 
 
 
@@ -38,6 +42,9 @@ VS Code / Command Line
 
 
 
+
+
+
 Accuracy & Performance
 
 1) Trained on ~87,000 images
@@ -54,6 +61,9 @@ Accuracy & Performance
 
 
 
+
+
+
 Limitations
 
 1) Detects single hand only
@@ -61,6 +71,9 @@ Limitations
 2) Background clutter can affect accuracy
 
 3) Not yet optimized for dynamic sentence-level gestures
+
+
+
 
 
 
