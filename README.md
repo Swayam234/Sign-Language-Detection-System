@@ -58,10 +58,13 @@ Training Split	80/20
 ⚙️ Installation & Setup
 1️⃣ Install Dependencies
 pip install -r requirements.txt
+
 2️⃣ Extract Landmarks (One-time)
 python src/extract_landmarks.py
+
 3️⃣ Train Model (One-time)
 python src/train_lstm.py
+
 4️⃣ Run Application
 🌐 Web App (Recommended)
 streamlit run app.py
@@ -97,7 +100,6 @@ Gesture recognition for words and phrases
 
 
 👨‍💻 Author
-
 Swayam Sandeep Karapurkar
 Aspiring AI & ML Engineer
 
