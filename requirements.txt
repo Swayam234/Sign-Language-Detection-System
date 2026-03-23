@@ -2,3 +2,7 @@ tensorflow
 opencv-python
 numpy
 matplotlib
+mediapipe
+pyttsx3
+streamlit
+scikit-learn

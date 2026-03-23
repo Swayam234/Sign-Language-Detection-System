@@ -9,7 +9,7 @@ model = tf.keras.models.load_model("model.h5")
 
 
 # AUTO LOAD LABELS (NO JSON)
-DATASET_DIR = r"C:\Sign language detector\asl_alphabet_train\asl_alphabet_train"
+DATASET_DIR = r"C:\Sign language detector\dataset\asl_alphabet_train\asl_alphabet_train"
 labels = sorted(os.listdir(DATASET_DIR))
 
 print("Loaded labels:", labels)

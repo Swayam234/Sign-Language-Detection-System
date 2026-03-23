@@ -1,90 +1,120 @@
-Sign Language Detection System (Real-Time)
+An advanced real-time Sign Language Detection System built using Deep Learning, Computer Vision, and NLP, capable of recognizing hand gestures (A–Z) and converting them into meaningful text and speech.
 
-A real-time Sign Language Detection system using Deep Learning and Computer Vision that recognizes hand gestures through a webcam and predicts corresponding sign language alphabets.
-This project demonstrates the application of CNN-based image classification with live video inference.
+This project leverages MediaPipe + LSTM architecture for efficient, CPU-optimized inference and provides both a desktop application and a web-based interface.
+
+🚀 Features
+🖐️ Hand Landmark Detection
+Uses MediaPipe HandLandmarker API
+Extracts 21 3D keypoints (63 features)
+Robust to:
+Rotation
+Scale variations
+Background noise
+Eliminates need for heavy CNN inference
+
+🧠 LSTM-Based Gesture Recognition
+Sequence-based prediction using LSTM neural network
+Input: 10 frames × 63 features
+
+Architecture:
+
+LSTM(64) → Dropout → LSTM(128) → BatchNorm → Dense → Softmax
+Achieved:
+✅ 96.30% Test Accuracy
+✅ Early stopping for optimal performance
+
+📝 NLP Sentence Formation
+Smart debounce logic prevents noisy predictions
+Letters added only after stable detection
+Supports:
+Sentence building
+Duplicate filtering
+
+🔊 Text-to-Speech (TTS)
+Converts predicted text into speech using pyttsx3
+Runs in a background thread (non-blocking)
+Controls:
+Press SPACE → Speak sentence
+Press BACKSPACE → Clear sentence
+
+🌐 Streamlit Web Application
+Modern dark-themed UI
+Features:
+Live webcam feed
+Hand skeleton visualization
+Real-time prediction + confidence
+Sentence display
+Controls: Start, Stop, Speak, Clear
+Adjustable confidence threshold
+
+📊 Model Performance
+Metric	Value
+Test Accuracy	96.30%
+Dataset Size	9,871 images
+Classes	29 (A–Z + del, nothing, space)
+Training Split	80/20
+
+📁 Project Structure
+Sign language detector/
+├── app.py                    # Streamlit web app
+├── requirements.txt         # Dependencies
+├── hand_landmarker.task     # MediaPipe model
+├── README.md                # Documentation
+└── src/
+    ├── extract_landmarks.py # Landmark extraction
+    ├── train_lstm.py        # LSTM training
+    ├── model_lstm.h5        # Trained model
+    ├── data/
+    │   ├── X.npy, y.npy, classes.npy
+    ├── predict_advanced.py  # Full-feature desktop app
+    └── predict_live.py      # Legacy version
+
+⚙️ Installation & Setup
+1️⃣ Install Dependencies
+pip install -r requirements.txt
+2️⃣ Extract Landmarks (One-time)
+python src/extract_landmarks.py
+3️⃣ Train Model (One-time)
+python src/train_lstm.py
+4️⃣ Run Application
+🌐 Web App (Recommended)
+streamlit run app.py
+💻 Desktop Mode
+python src/predict_advanced.py
+
+🧠 System Architecture
+Webcam → MediaPipe → Hand Landmarks (63 features)
+       → LSTM Model → Prediction
+       → NLP Processing → Sentence Formation
+       → Text-to-Speech Output
+
+🔥 Key Highlights
+⚡ Real-time performance on CPU (no GPU required)
+🎯 High accuracy with lightweight architecture
+🧩 Modular and scalable design
+🌍 Deployable via web interface
+🧠 Combines CV + DL + NLP + Speech
+
+⚠️ Limitations
+Supports single-hand gestures only
+Works best with:
+Good lighting
+Minimal background noise
+Limited to alphabet-level recognition (A–Z)
+
+🚀 Future Enhancements
+Dynamic gesture recognition using CNN + LSTM
+Sentence-level interpretation using advanced NLP
+Sign-to-speech with multilingual support
+Mobile/Web deployment with real-time streaming
+Gesture recognition for words and phrases
 
 
+👨‍💻 Author
 
+Swayam Sandeep Karapurkar
+Aspiring AI & ML Engineer
 
-Features
+⭐ If you like this project
 
-1) Real-time sign language detection using webcam
-
-2) Deep Learning model trained on ASL dataset
-
-3) Uses TensorFlow / Keras for model training & inference
-
-4) ROI-based hand detection for better accuracy
-
-5) Confidence thresholding to avoid false predictions
-
-6) Runs fully on CPU (no GPU required)
-
-7) Modular project structure (training + live prediction)
-
-
-
-
-Tech Stack
-
-Python 3.10+
-
-TensorFlow / Keras
-
-OpenCV
-
-NumPy
-
-ASL Alphabet Dataset
-
-VS Code / Command Line
-
-
-
-
-
-
-
-Accuracy & Performance
-
-1) Trained on ~87,000 images
-
-2) Supports A–Z alphabets
-
-3) Accuracy improves with:
-
-4) Proper lighting
-
-5) Centered hand inside ROI
-
-6) Reduced background noise
-
-
-
-
-
-
-Limitations
-
-1) Detects single hand only
-
-2) Background clutter can affect accuracy
-
-3) Not yet optimized for dynamic sentence-level gestures
-
-
-
-
-
-
-Future Enhancements
-
-1) MediaPipe-based hand landmark detection
-
-2) CNN + LSTM for motion-based gestures
-
-3) Sign-to-speech conversion
-
-4) Web app using Streamlit / Flask
-
-5) Sentence-level sign interpretation
+Give it a ⭐ on GitHub and share it!
