@@ -47,15 +47,22 @@ Sentence display
 Controls: Start, Stop, Speak, Clear
 Adjustable confidence threshold
 
+
 📊 Model Performance
+
 Metric	Value
+
 Test Accuracy	96.30%
+
 Dataset Size	9,871 images
+
 Classes	29 (A–Z + del, nothing, space)
+
 Training Split	80/20
 
 
 ⚙️ Installation & Setup
+
 1️⃣ Install Dependencies
 pip install -r requirements.txt
 
@@ -78,11 +85,17 @@ Webcam → MediaPipe → Hand Landmarks (63 features)
        → Text-to-Speech Output
 
 🔥 Key Highlights
+
 ⚡ Real-time performance on CPU (no GPU required)
+
 🎯 High accuracy with lightweight architecture
+
 🧩 Modular and scalable design
+
 🌍 Deployable via web interface
+
 🧠 Combines CV + DL + NLP + Speech
+
 
 ⚠️ Limitations
 Supports single-hand gestures only
