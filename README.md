@@ -2,6 +2,8 @@ An advanced real-time Sign Language Detection System built using Deep Learning, 
 
 This project leverages MediaPipe + LSTM architecture for efficient, CPU-optimized inference and provides both a desktop application and a web-based interface.
 
+
+
 🚀 Features
 🖐️ Hand Landmark Detection
 Uses MediaPipe HandLandmarker API
@@ -48,6 +50,8 @@ Controls: Start, Stop, Speak, Clear
 Adjustable confidence threshold
 
 
+
+
 📊 Model Performance
 
 Metric	Value
@@ -59,6 +63,8 @@ Dataset Size	9,871 images
 Classes	29 (A–Z + del, nothing, space)
 
 Training Split	80/20
+
+
 
 
 ⚙️ Installation & Setup
@@ -73,16 +79,24 @@ python src/extract_landmarks.py
 python src/train_lstm.py
 
 4️⃣ Run Application
+
 🌐 Web App (Recommended)
+
 streamlit run app.py
+
 💻 Desktop Mode
+
 python src/predict_advanced.py
+
+
 
 🧠 System Architecture
 Webcam → MediaPipe → Hand Landmarks (63 features)
        → LSTM Model → Prediction
        → NLP Processing → Sentence Formation
        → Text-to-Speech Output
+
+
 
 🔥 Key Highlights
 
@@ -97,12 +111,16 @@ Webcam → MediaPipe → Hand Landmarks (63 features)
 🧠 Combines CV + DL + NLP + Speech
 
 
+
+
 ⚠️ Limitations
 Supports single-hand gestures only
 Works best with:
 Good lighting
 Minimal background noise
 Limited to alphabet-level recognition (A–Z)
+
+
 
 🚀 Future Enhancements
 Dynamic gesture recognition using CNN + LSTM
@@ -112,9 +130,13 @@ Mobile/Web deployment with real-time streaming
 Gesture recognition for words and phrases
 
 
+
+
 👨‍💻 Author
 Swayam Sandeep Karapurkar
 Aspiring AI & ML Engineer
+
+
 
 ⭐ If you like this project
 
