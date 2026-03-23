@@ -54,20 +54,6 @@ Dataset Size	9,871 images
 Classes	29 (A–Z + del, nothing, space)
 Training Split	80/20
 
-📁 Project Structure
-Sign language detector/
-├── app.py                    # Streamlit web app
-├── requirements.txt         # Dependencies
-├── hand_landmarker.task     # MediaPipe model
-├── README.md                # Documentation
-└── src/
-    ├── extract_landmarks.py # Landmark extraction
-    ├── train_lstm.py        # LSTM training
-    ├── model_lstm.h5        # Trained model
-    ├── data/
-    │   ├── X.npy, y.npy, classes.npy
-    ├── predict_advanced.py  # Full-feature desktop app
-    └── predict_live.py      # Legacy version
 
 ⚙️ Installation & Setup
 1️⃣ Install Dependencies
