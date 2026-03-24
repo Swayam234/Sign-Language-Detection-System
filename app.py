@@ -1,8 +1,6 @@
 """
 app.py  –  Streamlit Web Interface for Sign Language Detection
 ==============================================================
-Run with:
-    streamlit run app.py
 """
 
 import streamlit as st
